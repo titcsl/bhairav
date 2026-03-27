@@ -7,8 +7,6 @@ import lombok.Setter;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.Instant;
-@Getter
-@Setter
 @Transactional
 @Entity
 @Table(name = "encrypted_records")
@@ -25,4 +23,35 @@ public class Encrypt {
     @Column(name = "created_at")
     private Instant createdAt = Instant.now();
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCiphertext(String ciphertext) {
+        this.ciphertext = ciphertext;
+    }
+
+    public void setEncKey(byte[] encKey) {
+        this.encKey = encKey;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getCiphertext() {
+        return ciphertext;
+    }
+
+    public byte[] getEncKey() {
+        return encKey;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
 }

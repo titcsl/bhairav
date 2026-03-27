@@ -19,5 +19,5 @@ memcached:
   connection-pool-size: 10
 
 quantum-wall:
-  api-key: 1
+  api-key: 111
   nonce-window-seconds: 30
